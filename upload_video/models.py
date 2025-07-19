@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 
 
-##########################################################
-
 class creator(models.Model):
     image = models.ImageField(upload_to='craetor/')
     name = models.CharField(max_length=250)
@@ -12,8 +10,6 @@ class creator(models.Model):
     contact = models.URLField()
     def __str__(self):
         return self.name
-
-########################################################################3
 
 
 class video_table(models.Model):
@@ -37,8 +33,6 @@ class video_table(models.Model):
     def __str__(self):
         return self.title
 
-############################################################################
-
 
 
 class top_video(models.Model):
@@ -61,9 +55,6 @@ class top_video(models.Model):
     def file_id(self):
         return self.top_video_file.id
 
-
-##############################################################################
-
     
 class maincontent(models.Model):
     title = models.CharField(max_length=250)
@@ -72,7 +63,6 @@ class maincontent(models.Model):
     def __str__(self):
         return self.title
 
-#########################################################################################
 
 class Footer(models.Model):
     poster = models.ImageField(upload_to='footer/')
@@ -81,7 +71,6 @@ class Footer(models.Model):
     def __str__(self):
         return "Footer Content"
     
-#########################################################################
 
 class search_bar(models.Model):
     title = models.CharField(max_length=100, default= None)
@@ -89,7 +78,6 @@ class search_bar(models.Model):
     def __str__(self):
         return self.query
     
-############################################################################
 
 class ads(models.Model):
     name = models.CharField(max_length=200, default='sponsor')
@@ -99,7 +87,6 @@ class ads(models.Model):
     def __str__(self):
         return "ads content"
 
-######################################################################
 
 class news(models.Model):
     poster = models.ImageField(upload_to='news/')
@@ -110,7 +97,6 @@ class news(models.Model):
     def __str__(self):
         return self.title
 
-####################################################################333
 
 class post(models.Model):
     poster = models.ImageField(upload_to='post/')
